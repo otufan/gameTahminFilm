@@ -37,12 +37,12 @@ public class FilmisimleriRunner {
 		System.out.println("");
 		System.out.println("Tahmin edeceginiz Film -----> "+filmSifreli);
 		
+		FilmIsimleri.oyun(kullanici.filmNumara);
 		
 		
 		
-		
-	}
-
 	
 
+	
+	}
 }
