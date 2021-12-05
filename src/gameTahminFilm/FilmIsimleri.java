@@ -25,8 +25,8 @@ public class FilmIsimleri {
 																"Dunkirk","James Bond" ,"Yildizlararasi", "Fight Club" ,"Matrix", "Iyi Kotu Cirkin",
 																"Yuzuklerin Efendisi","Star Wars", "Kuzularin Sessizligi","Terminator"));
 	int filmNumara=0;
-	static int puan=100;
-	static int hak=10;
+	int puan=100;
+	int hak=10;
 	
 	
 	public FilmIsimleri() {
@@ -78,16 +78,37 @@ public class FilmIsimleri {
 		
 			while (kullanici.puan>0&&kullanici.hak>0) {
 		
+		/*System.out.println("FILMI TAHMIN ETMEK ISTER MISINIZ : " );
+		String soru=scan.next();
+					
+		System.out.println("");
+					
+		if (soru.toLowerCase().contains("e")) {System.out.print("Lutfen tahmininizi giriniz :");
+		String filmTahmin=scan.nextLine();
+					
+		if(filmTahmin.toLowerCase().equals(filmIsim.toLowerCase())) {
+		System.out.println("Oyunu kazandiniz TEBRIKLER!!!");
+		System.out.println("Toplam puaniniz : " + kullanici.puan);
+		break;
+		} 
+		else {continue;}
+		
+		} else {*/
+				
 		System.out.println("Toplam puaniniz : " + (kullanici.puan));
 		System.out.print("Tahminize kac puan yatirmak istersiniz : " );
 		puan=scan.nextInt();
 		
-			
+		
+		
+		
 		while(puan>kullanici.puan) {System.out.println("Lutfen su anki puaninizdan daha dusuk bir puan giriniz ---> " + (kullanici.puan) +" <---");
 		System.out.print("Girmek istediginiz puan : ");
 		puan=scan.nextInt();
 		
-		}
+		
+				}
+		
 		
 		System.out.print("Lutfen bir harf giriniz : ");
 		
@@ -110,11 +131,11 @@ public class FilmIsimleri {
 		kullanici.hak--;
 		System.out.println("Toplam puaniniz : " + kullanici.puan + " kalan hakkiniz : " + kullanici.hak);
 		System.out.println("Tahmin etmeniz gereken film : " + filmSifreli);
-		
+	
 		if(filmIsim.toLowerCase().equals(filmSifreli.toLowerCase())) {
 			System.out.println("Oyunu kazandiniz TEBRIKLER!!!");
 			System.out.println("Toplam puaniniz : " + kullanici.puan);
-			break;
+			
 			
 		} } else { 
 		
@@ -129,18 +150,18 @@ public class FilmIsimleri {
 		
 				}
 		
-	
-					
-				}
+			}
 			
 			if (kullanici.puan==0||kullanici.hak==0) { System.out.println("Oyunu kaybettiniz");
 			System.out.println("Tahmin etmeniz gereken film ismi :" + filmIsim);
 				
 			}
 			
-			
+			scan.close();
 		}
+	
 			}
+
 			
 		
 			
